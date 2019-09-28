@@ -1,6 +1,6 @@
 Feature: Getting a data from database
 
-Scenario: Get some Data
+Scenario: Get some Data  
 
 Given Get the connection and get the data "select * from products;" , "productCode" , "S10_4698" ,  "productName"
 
