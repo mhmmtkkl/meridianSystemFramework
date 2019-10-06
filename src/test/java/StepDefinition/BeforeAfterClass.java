@@ -46,17 +46,22 @@ public class BeforeAfterClass {
 	public void afterClass(Scenario scenario) {
 		   		
 		if(scenario.isFailed()) {
-		TakesScreenshot scrShot =((TakesScreenshot)MyDriver.getDriver());
+		
+			TakesScreenshot scrShot =((TakesScreenshot)MyDriver.getDriver());
 
-		System.out.println("after started ----------------------------------------------------------");
+			System.out.println("after started ----------------------------------------------------------");
 		  		//Call getScreenshotAs method to create image file
 
-	                File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+	             File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
 
 	            //Move image file to new destination
  
-	                String FeatureFileName = scenario.getId();
+	         
+	               
+	           		String FeatureFileName = scenario.getId();
 	                
+	           System.out.println("FeatureFileName     " + FeatureFileName);
+	           		
 //	                removing the / from feature file name
 	                String[] arrFeat=FeatureFileName.split("/");
 	                
@@ -64,13 +69,19 @@ public class BeforeAfterClass {
 	                
 	                String FeatureName = arrFeat[arrFeatLength-1];
 	               
+	           System.out.println("FeatureName     " + FeatureName);
+	           
 //	                removing the . from feature file name
 	                int dotPlace = FeatureName.indexOf(".");
 	                
 	                FeatureName= FeatureName.substring(0,dotPlace);
 	                
+	           System.out.println("FeatureName     " + FeatureName);
+	                
 //	                creating the todays date and hour for now 
 	                Date now = new Date();
+	                
+	           System.out.println("now     " + now);
 
 	                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ssZ");
 	                
