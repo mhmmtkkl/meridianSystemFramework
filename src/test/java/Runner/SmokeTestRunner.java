@@ -6,7 +6,6 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 
-
 @RunWith(Cucumber.class)
 @CucumberOptions(strict = true,
 	plugin = {"pretty" , "html:target/cucumberHTMLRepo.html" , "json:target/cucumberJSON.json","rerun:target/rerun.txt" }	,

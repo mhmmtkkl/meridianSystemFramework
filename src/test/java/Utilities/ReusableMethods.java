@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 
 import cucumber.api.Scenario;
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.databind.deser.std.DateDeserializers.CalendarDeserializer;
+import junit.framework.Assert;
 
 public class ReusableMethods {
 
@@ -72,7 +73,14 @@ public class ReusableMethods {
 		return myDateReturn;
 	}
 	
-	 
+	 public boolean verifyURL(String expexted) {
+		 
+		String url= driver.getCurrentUrl();
+		 
+		boolean b1 = url.contains(expexted);
+		
+		return b1;
+	 }
 	
 	
 	

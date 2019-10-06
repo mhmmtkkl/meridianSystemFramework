@@ -31,13 +31,15 @@ public class SignInToMEridianWEbSite {
 
 	
 	@And("Fill the username and password input after this  click on the sign in button")
-	public void TypeTheUserNameAndPasswordClickOnInput(){
+	public void TypeTheUserNameAndPasswordClickOnInput() throws InterruptedException{
 	    
 		LT.input_Username.sendKeys(GlobalVariableReader.getData("username"));
 		
 		LT.input_Password.sendKeys(GlobalVariableReader.getData("password"));
 		
 		LT.btn_Login.click();
+		
+		Thread.sleep(5000);
 		 
 	};
 	 

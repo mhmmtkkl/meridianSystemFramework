@@ -36,13 +36,13 @@ public class GetTheDatafromExcal {
 		
 //		we need to get the total count of the row in the excel sheet
 		 int totalNumofRow = sheet.getPhysicalNumberOfRows();
-		
+		System.out.println(totalNumofRow);
 		for(int i = 0 ; i < totalNumofRow ;i++) {
 			
 			row = sheet.getRow(i);
 			
 			int cellCount = row.getPhysicalNumberOfCells();
-			
+			System.out.println(cellCount);
 			for(int j =0 ; j<cellCount ; j++) {
 				
 				cell = row.getCell(j);
@@ -53,7 +53,7 @@ public class GetTheDatafromExcal {
 					cell = row.getCell(j);
 					
 					result=cell.toString();
-					
+					System.out.println("result "+result);
 					break;
 				}
 				

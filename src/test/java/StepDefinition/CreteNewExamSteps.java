@@ -36,6 +36,8 @@ public class CreteNewExamSteps {
 	@And("Click on exam dropdown")
 	public void ClickonExamDropdown() throws Exception{
 	      
+		
+		
 		wait.until(ExpectedConditions.elementToBeClickable(DBP.dropdown_exams));
 		
 		DBP.dropdown_exams.click();
@@ -48,9 +50,9 @@ public class CreteNewExamSteps {
 		wait.until(ExpectedConditions.elementToBeClickable(DBP.btn_Setup));
 		
 		DBP.btn_Setup.click();
-		
+
 	};
-	  
+	
 	@And("Click on Entrance Exams")
 	public void Click_on_Entrance_Exams(){
 	    
