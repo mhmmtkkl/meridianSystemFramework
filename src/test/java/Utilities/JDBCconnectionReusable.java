@@ -9,12 +9,12 @@ public class JDBCconnectionReusable {
 	
 	 
 	
-	public String getData(String myQuery , String ColumnName ,String myExpectedID ,String ExpectedColumnName) throws Exception{
+	public String getData( String myQuery , String ColumnName ,String myExpectedID ,String ExpectedColumnName) throws Exception{
 		
 		 Connection connection = DriverManager.getConnection(GlobalVariableReader.getData("DBURL") , GlobalVariableReader.getData("usernameDB"),GlobalVariableReader.getData("passwordDB") );
 		 Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 		 ResultSet resultSet = statement.executeQuery(myQuery);
-		
+		 
 		 resultSet.last();
 		 
 		 int rowCount = resultSet.getRow();

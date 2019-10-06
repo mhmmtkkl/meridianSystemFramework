@@ -1,15 +1,18 @@
 package Runner;
 
 import org.junit.runner.RunWith;
-
+ 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
+
+
 @RunWith(Cucumber.class)
-@CucumberOptions(
-	plugin = {"pretty" , "html:target/cucumberHTMLRepo.html" , "json:target/cucumberJSON.json" }	,
+@CucumberOptions(strict = true,
+	plugin = {"pretty" , "html:target/cucumberHTMLRepo.html" , "json:target/cucumberJSON.json","rerun:target/rerun.txt" }	,
 	tags="@SmokeTest2",
 	features = {"src/feature/test"}	,
+	monochrome = true,
 	glue = {"StepDefinition"}
 		 	)
 

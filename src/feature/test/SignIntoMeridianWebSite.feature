@@ -1,4 +1,4 @@
-@SmokeTest1
+@SmokeTest2
 Feature: Sign in Meridian Website
 
   Scenario: Go to website and sign in to user

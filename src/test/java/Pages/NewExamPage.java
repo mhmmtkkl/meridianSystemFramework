@@ -1,8 +1,12 @@
 package Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.MyDriver;
@@ -46,6 +50,25 @@ private WebDriver driver = MyDriver.getDriver();
 	
 	@FindBy(xpath="//button[@class='mr-16 mat-icon-button mat-button-base ng-star-inserted']")
 	public WebElement button_Back;
+	
+	
+	 
+	
+	
+	
+	@FindAll({
+		@FindBy(xpath="//span[@class='_5k_2 _5dba']")
+	})
+	public List<WebElement> allRadioButton;
+	
+	public void getRadioSize() {
+		
+		allRadioButton.size();
+		
+	}
+	
+	
+	
 	
 	
 	
