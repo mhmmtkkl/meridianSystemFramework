@@ -102,7 +102,7 @@ public class BeforeAfterClass {
 			}
 	                
 		 
-//		 	MyDriver.closeDriver();
+		 	MyDriver.closeDriver();
 	               
 	
 		}
