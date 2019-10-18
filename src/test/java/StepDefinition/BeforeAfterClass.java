@@ -39,7 +39,6 @@ public class BeforeAfterClass {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		
 	}
 	
 	@After

@@ -1,7 +1,6 @@
 package Runner;
 
 import org.junit.runner.RunWith;
- 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
@@ -10,8 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(strict = true,
 	plugin = {"pretty" , "html:target/cucumberHTMLRepo.html" , "json:target/cucumberJSON.json","rerun:target/rerun.txt" }	,
 	tags="@SmokeTest2",
-	features = {"src/feature/test"}	,
-	monochrome = true,
+	features = {"src/feature/test"},
 	glue = {"StepDefinition"}
 		 	)
 
