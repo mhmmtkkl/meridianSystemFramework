@@ -1,7 +1,9 @@
 package Pages;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -44,12 +46,31 @@ public class Item_Category {
 			@FindBy(xpath="//span[@class='mat-option-text']")
 	})
 	public List<WebElement> listOfuserType;
+ 	
 	
 	
+	@FindAll({
+		@FindBy(xpath="//table//td[2]")
+	})
+	public List<WebElement> NameOfTheCategory;
+	
+	public String quesryForCity = " select city from offices;";
 	
 	
-	
-	
+	public ArrayList<String> getName(){
+		
+		ArrayList<String> s1 = new ArrayList<>();
+		
+		int sizeofTable = driver.findElements(By.xpath("//table//td[2]")).size();
+		
+		for (int i = 1; i <= sizeofTable; i++) {
+			
+			s1.add(driver.findElement(By.xpath("(//table//td[2])["+i+"]")).getText());
+			
+		}
+		 
+		return s1;
+	}
 	
 	
 	
